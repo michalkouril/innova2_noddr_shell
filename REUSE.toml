@@ -1,0 +1,33 @@
+version = 1
+SPDX-PackageName = "innova2_noddr_shell"
+SPDX-PackageSupplier = "the innova2 contributors"
+
+[[annotations]]
+path = ["LICENSE_AUDIT.md", "README.md", "NOTICE", "packaging/VERSION", "root/lib/firmware/xilinx/innova2_innova2_noddr_202320_3_primary.prm", "root/lib/firmware/xilinx/innova2_innova2_noddr_202320_3_secondary.prm", "root/lib/firmware/xilinx/innova2_innova2_noddr_202320_3_bope_primary.prm", "root/lib/firmware/xilinx/innova2_innova2_noddr_202320_3_bope_secondary.prm", "root/opt/xilinx/dsa/innova2_innova2_noddr_202320_3/license/COPYRIGHT", "root/opt/xilinx/dsa/innova2_innova2_noddr_202320_3/license/LICENSE", "root/opt/xilinx/dsa/innova2_innova2_noddr_202320_3/test/platform.json", "root/opt/xilinx/dsa/innova2_innova2_noddr_202320_3/tools/xrt/README.md", "root/usr/bin/innova2_noddr_flash_user", "root/usr/share/doc/innova2-noddr/copyright"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2026 the innova2 contributors"]
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ["root/opt/xilinx/dsa/innova2_innova2_noddr_202320_3/tools/xbflash.probe"]
+precedence = "override"
+SPDX-FileCopyrightText = ["Xilinx, Inc.", "2026 the innova2 contributors"]
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ["root/lib/firmware/xilinx/innova2_innova2_noddr_202320_3.bit", "root/lib/firmware/xilinx/innova2_innova2_noddr_202320_3_bope_primary.bin", "root/lib/firmware/xilinx/innova2_innova2_noddr_202320_3_bope_secondary.bin", "root/lib/firmware/xilinx/innova2_innova2_noddr_202320_3_primary.mcs", "root/lib/firmware/xilinx/innova2_innova2_noddr_202320_3_secondary.mcs", "root/lib/firmware/xilinx/10ee-6a9f-4351-000000006ad72d90.xsabin", "root/lib/firmware/xilinx/10ee-6aa0-4351-000000006ad72d90.xsabin", "root/lib/firmware/xilinx/10ee-788f-4351-000000006ad72d90.xsabin", "root/lib/firmware/xilinx/10ee-7890-4351-000000006ad72d90.xsabin", "root/opt/xilinx/dsa/innova2_innova2_noddr_202320_3/test/bandwidth.xclbin", "root/opt/xilinx/dsa/innova2_innova2_noddr_202320_3/test/verify.xclbin", "root/opt/xilinx/dsa/innova2_innova2_noddr_202320_3/test/verify_plram.xclbin"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2026 the innova2 contributors", "Advanced Micro Devices, Inc."]
+SPDX-License-Identifier = "Apache-2.0 AND LicenseRef-AMD-IP"
+
+[[annotations]]
+path = ["root/opt/xilinx/dsa/innova2_innova2_noddr_202320_3/license/GPL-2.0-only.txt"]
+precedence = "override"
+SPDX-FileCopyrightText = ["1989, 1991 Free Software Foundation, Inc."]
+SPDX-License-Identifier = "GPL-2.0-only"
+
+[[annotations]]
+path = ["root/opt/xilinx/dsa/innova2_innova2_noddr_202320_3/license/LicenseRef-AMD-IP.txt"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2026 the innova2 contributors"]
+SPDX-License-Identifier = "Apache-2.0"

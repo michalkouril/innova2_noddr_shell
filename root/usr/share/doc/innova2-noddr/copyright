@@ -1,0 +1,7 @@
+innova2-noddr: Innova-2 noddr (route V) XRT shell, release noddr r1 (route V r3x4).
+Copyright: 2026 the innova2 contributors
+License: Apache-2.0 AND LicenseRef-AMD-IP -- see /opt/xilinx/dsa/innova2_innova2_noddr_202320_3/license/LICENSE and COPYRIGHT
+Documentation: /opt/xilinx/dsa/innova2_innova2_noddr_202320_3/doc/
+Third-party: test/bandwidth.xclbin kernel Copyright (C) 2019-2021 Xilinx, Inc. (Apache-2.0); tools/xbflash.probe built
+from XRT's xbflash.qspi (Xilinx, Apache-2.0); tools/xrt patches to XRT's xocl driver (GPL-2.0-only).
+Licence texts: /opt/xilinx/dsa/innova2_innova2_noddr_202320_3/license/{LICENSE,GPL-2.0-only.txt,LicenseRef-AMD-IP.txt}
