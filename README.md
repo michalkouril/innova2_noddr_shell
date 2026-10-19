@@ -45,9 +45,9 @@ still matches this package.
 
 | system | command |
 |---|---|
-| Debian / Ubuntu | `sudo apt install ./innova2-noddr_202320.3.0-1_all.deb` |
-| RHEL / Rocky / Fedora | `sudo dnf install ./innova2-noddr-202320.3.0-1.noarch.rpm` |
-| anything else | `tar xzf innova2-noddr-202320.3.0-1.tar.gz && sudo innova2-noddr-202320.3.0-1/install.sh` (`--check` compares only) |
+| Debian / Ubuntu | `sudo apt install ./innova2-noddr_202320.3.0-2_all.deb` |
+| RHEL / Rocky / Fedora | `sudo dnf install ./innova2-noddr-202320.3.0-2.noarch.rpm` |
+| anything else | `tar xzf innova2-noddr-202320.3.0-2.tar.gz && sudo innova2-noddr-202320.3.0-2/install.sh` (`--check` compares only) |
 
 The package shares no file with `innova2-xdma` (inn2x r10): both can be installed, and the card's ROM timestamp
 decides which boot xsabin xclmgmt loads. None of the packages flashes the card.
