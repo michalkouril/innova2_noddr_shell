@@ -140,7 +140,23 @@ counter and the loaded RM: KEPT / PRUNED / boot RM), `check` (passive; exit 0 OK
 
 ## Validation
 
-VALIDATION-PENDING: filled in from the release's hardware runs.
+On hardware, 2026-10-18: one card (MNV303212A-ADLT) in an HP Z440, Ubuntu 26.04, kernel 7.0, XRT 2.27 with the
+`tools/xrt/` patches.
+
+* **Flash:** written from inn2x r10 over PCIe with `xbflash.qspi`. A raw read-back of both chips matches the release
+  MCS pair byte for byte, and the Factory region is unchanged. After a cold cycle the card runs this shell (ROM_TS
+  0x6ad72d90, Device Ready). The boot xsabin, `verify.xclbin` and `bandwidth.xclbin` on the host are the release's
+  files (same SHA256).
+* **`xrt-smi validate -r all`:** verify, dma (16 MB in bank0: 6.5 GB/s host to card, 6.6 GB/s card to host),
+  mem-bw (bank0 DDR: 17.6 GB/s), p2p (bank0), pcie-link and sc-version PASSED. aie, aux-connection, hostmem-bw and
+  m2m are skipped: this board and platform do not have them. No `DMA failed` in dmesg; DDR4 at 2667 MT/s, ECC 0
+  corrected / 0 uncorrectable.
+* **`innova2-smi check`:** no failures. `ddr.cal_lost` counts the PCIe link-down resets of warm reboots since the
+  last cold boot (the recorder shows each one next to its `LINK_DOWN`). `innova2_py_app` 1.3.23 also warns
+  `identity.uuid_mismatch`: its table lists a pre-release static for this ROM_TS. The warning is harmless, and the
+  next `innova2_py_app` release knows this build.
+* **Examples:** lat_probe, fld_echo, memcached, ntp, iperf and hls4ml from `innova2_noddr_shell_examples` pass on
+  the same card, linked with this release's hooks. Results and videos are in that repository's README.
 
 ## Repository layout and building the packages
 
