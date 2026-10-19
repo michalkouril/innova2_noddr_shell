@@ -39,7 +39,7 @@ still matches this package.
 * XRT 2.27 (tested: master `1ea5176db` on Ubuntu 26.04, kernel 7.0). Stock XRT runs the shell; the xocl patches in
   `tools/xrt/` add host memory, a second card on kernel >= 6.18 and P2P buffers on kernel >= 6.17.
 * Root.
-* The `innova2_py_app` package (1.3.23 or later), for flashing from the Flex image and for `innova2-smi`.
+* The `innova2_py_app` package (1.3.24 or later), for flashing from the Flex image and for `innova2-smi`.
 
 ## Install (release packages)
 
@@ -153,8 +153,8 @@ On hardware, 2026-10-18: one card (MNV303212A-ADLT) in an HP Z440, Ubuntu 26.04,
   corrected / 0 uncorrectable.
 * **`innova2-smi check`:** no failures. `ddr.cal_lost` counts the PCIe link-down resets of warm reboots since the
   last cold boot (the recorder shows each one next to its `LINK_DOWN`). `innova2_py_app` 1.3.23 also warns
-  `identity.uuid_mismatch`: its table lists a pre-release static for this ROM_TS. The warning is harmless, and the
-  next `innova2_py_app` release knows this build.
+  `identity.uuid_mismatch`: its table lists a pre-release static for this ROM_TS. The warning is harmless;
+  [1.3.24](https://github.com/michalkouril/innova2_py_app/releases/tag/v1.3.24) knows this build.
 * **Examples:** lat_probe, fld_echo, memcached, ntp, iperf and hls4ml from `innova2_noddr_shell_examples` pass on
   the same card, linked with this release's hooks. Results and videos are in that repository's README.
 
