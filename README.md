@@ -128,6 +128,11 @@ counter and the loaded RM: KEPT / PRUNED / boot RM), `check` (passive; exit 0 OK
   is an unmapped hole that must not be touched.** A pruned PLRAM in the window reads 0.
 * **PCI IDs:** mgmt `10ee:788f`, user `10ee:6a90`, subsystem `10ee:4351` are entries in stock XRT's device tables,
   used so that an unmodified XRT binds the card. This is not an AMD product and is not endorsed by AMD.
+* **P2P: load an xclbin that keeps DDR first after every reset.** XRT's P2P slot table is fixed by the first xclbin
+  loaded after a reset. If that one prunes DDR (for example `verify_plram.xclbin`), every later P2P buffer in `bank0`
+  fails (`map P2P failed, ret = -2` in dmesg, `failed to allocate bo: Operation not permitted` in the application)
+  until the next warm reboot. Load `verify.xclbin` first, then your xclbin. P2P itself is off after a cold boot:
+  `sudo xrt-smi configure -d <user BDF> --p2p enable`, then warm reboot.
 * **`xrt::bo::sync` hides DMA errors** (an upstream XRT bug): a DMA into pruned or fenced memory logs "DMA failed" in
   dmesg while the application sees success.
 * **HP Z440:** after a PCIe change the BIOS stops at "press F1"; remote power control cannot always clear it.
